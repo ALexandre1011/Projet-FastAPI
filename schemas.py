@@ -9,6 +9,7 @@ def individual_data(todo):
 
     return {
         'id': str(todo['_id']),
+        'ts': todo.get('ts'),
         'air_temperature': (todo.get('airTemperature') or {}).get('value'),
         'wind_speed': ((todo.get('wind') or {}).get('speed') or {}).get('rate'),
         'wind_direction': ((todo.get('wind') or {}).get('direction') or {}).get('angle'),
