@@ -11,7 +11,6 @@ class WindDirection(BaseModel):
     quality: str
     type: Optional[str]
 
-
 class WindSpeed(BaseModel):
     rate: float
     quality: str

@@ -1,9 +1,11 @@
+from datetime import datetime, timezone
+
 def individual_data(todo):
     deleted = todo.get('is_deleted', False)
     deleted_at = todo.get('deleted_at')
 
     if deleted and deleted_at:
-        deleted_at_str = deleted_at.strftime('%Y-%m-%d')
+        deleted_at_str = deleted_at.astimezone(timezone.utc).isoformat()
     else:
         deleted_at_str = None
 

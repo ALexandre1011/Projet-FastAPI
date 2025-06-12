@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from routes import router
+from functions import router
 from auth import create_jwt_token
 
 app = FastAPI()
